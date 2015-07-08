@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.0.0" type="package" method="upgrade">
+    <identifier>pkg:categories</identifier>
+    <name>pkg_categories</name>
+    <packagename>categories</packagename>
+    <author>Joomlatools</author>
+    <creationDate>June 2015</creationDate>
+    <copyright>Copyright (C) 2015 Timble CVBA (http://www.timble.net)</copyright>
+    <copyright>Copyright (C) 2015 Johan Janssens</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>1.0.0</version>
+    <description>A categories extension for the Joomla Platform</description>
+
+    <files>
+        <file type="component" id="com_categories">administrator/components</file>
+        <file type="plugin" id="categories" group="finder">plugins/finder/categories</file>
+        <file type="plugin" id="categories" group="search">plugins/search/categories</file>
+        <file type="plugin" id="categories" group="content">plugins/content/categories</file>
+    </files>
+</extension>
