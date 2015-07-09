@@ -99,8 +99,8 @@ class CategoriesHelper
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true)
 			->from('#__categories as c')
-			->join('INNER', '#__associations as a ON a.id = c.id AND a.context=' . $db->quote('com_categories.item'))
-			->join('INNER', '#__associations as a2 ON a.key = a2.key')
+			->join('INNER', '#__languages_associations as a ON a.id = c.id AND a.context=' . $db->quote('com_categories.item'))
+			->join('INNER', '#__languages_associations as a2 ON a.key = a2.key')
 			->join('INNER', '#__categories as c2 ON a2.id = c2.id AND c2.extension = ' . $db->quote($extension))
 			->where('c.id =' . (int) $pk)
 			->where('c.extension = ' . $db->quote($extension));

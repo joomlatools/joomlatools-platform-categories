@@ -504,7 +504,7 @@ class CategoriesModelCategory extends JModelAdmin
 			// Deleting old association for these items
 			$db = JFactory::getDbo();
 			$query = $db->getQuery(true)
-				->delete('#__associations')
+				->delete('#__languages_associations')
 				->where($db->quoteName('context') . ' = ' . $db->quote('com_categories.item'))
 				->where($db->quoteName('id') . ' IN (' . implode(',', $associations) . ')');
 			$db->setQuery($query);
@@ -521,7 +521,7 @@ class CategoriesModelCategory extends JModelAdmin
 				// Adding new association for these items
 				$key = md5(json_encode($associations));
 				$query->clear()
-					->insert('#__associations');
+					->insert('#__languages_associations');
 
 				foreach ($associations as $id)
 				{
@@ -850,7 +850,7 @@ class CategoriesModelCategory extends JModelAdmin
 	protected function batchMove($value, $pks, $contexts)
 	{
 		$parentId = (int) $value;
-		
+
 		$db = $this->getDbo();
 		$query = $db->getQuery(true);
 		$extension = JFactory::getApplication()->input->get('extension', '', 'word');
