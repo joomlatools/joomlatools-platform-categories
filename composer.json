@@ -20,5 +20,8 @@
   "require": {
     "php": ">=5.5.0",
     "joomlatools/installer": "*"
+  },
+  "autoload": {
+    "files": ["autoload.php"]
   }
 }
