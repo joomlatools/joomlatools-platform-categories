@@ -88,7 +88,7 @@ class CategoriesModelCategory extends JModelAdmin
 	 *
 	 * @since   1.6
 	 */
-	public function getTable($type = 'Category', $prefix = 'CategoriesTable', $config = array())
+	public function getTable($type = 'Categories', $prefix = 'CategoriesTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
