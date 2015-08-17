@@ -169,7 +169,7 @@ class CategoriesModelCategories extends JModelList
 
 		// Join over the users for the author.
 		$query->select('ua.name AS author_name')
-			->join('LEFT', '#__users_roles AS ua ON ua.id = a.created_user_id');
+			->join('LEFT', '#__users AS ua ON ua.id = a.created_user_id');
 
 		// Join over the associations.
 		$assoc = $this->getAssoc();
