@@ -14,3 +14,5 @@ JLoader::register('CategoriesViewCategoryfeed', JPATH_SITE . '/components/com_ca
 JLoader::registerAlias('JTableCategory'   , 'CategoriesTableCategories');
 JLoader::registerAlias('JViewCategories'  , 'CategoriesViewCategories');
 JLoader::registerAlias('JViewCategoryfeed', 'CategoriesViewCategoryfeed');
+
+JHtml::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_categories/helpers/html');
