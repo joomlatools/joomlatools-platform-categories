@@ -10,9 +10,8 @@
 JLoader::register('CategoriesTableCategories' , JPATH_ADMINISTRATOR . '/components/com_categories/tables/categories.php');
 //JLoader::register('CategoriesViewCategories'  , JPATH_SITE . '/components/com_categories/views/categories/view.html.php');
 //JLoader::register('CategoriesViewCategoryfeed', JPATH_SITE . '/components/com_categories/views/category/view.feed.php');
+JLoader::register('JFormFieldCategoryEdit', JPATH_ADMINISTRATOR . '/components/com_categories/models/fields/categoryedit.php');
 
 JLoader::registerAlias('JTableCategory'   , 'CategoriesTableCategories');
 JLoader::registerAlias('JViewCategories'  , 'CategoriesViewCategories');
 JLoader::registerAlias('JViewCategoryfeed', 'CategoriesViewCategoryfeed');
-
-JHtml::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_categories/helpers/html');
