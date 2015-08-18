@@ -25,7 +25,6 @@
     </uninstall>
 
     <files folder="../../../site/components/com_categories">
-        <folder>helpers</folder>
         <folder>views</folder>
     </files>
 
@@ -36,6 +35,7 @@
 			<folder>controllers</folder>
 			<folder>helpers</folder>
             <folder>language</folder>
+            <folder>libraries</folder>
 			<folder>models</folder>
             <folder>resources</folder>
             <folder>tables</folder>
