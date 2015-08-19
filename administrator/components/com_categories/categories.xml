@@ -29,6 +29,8 @@
     </files>
 
 	<administration>
+        <menu hidden="true" />
+
         <files folder="../../../administrator/components/com_categories">
 			<filename>categories.php</filename>
 			<filename>controller.php</filename>
