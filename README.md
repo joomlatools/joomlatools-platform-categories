@@ -4,6 +4,8 @@
 
 Joomla Categories is a category management extension for the [Joomlatools Platform] supporting a nested set approach.
 
+> Forked from [Joomla CMS v3.3.6](https://github.com/joomla/joomla-cms/releases/tag/3.3.6)
+
 ## Requirements
 
 - PHP 5.5 or newer
