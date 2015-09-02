@@ -36,6 +36,6 @@ Keep track of development and community news.
 * Follow [@joomlatools on Twitter](https://twitter.com/joomlatools)
 * Read and subscribe to the [Joomlatools Blog](https://joomlatools.com/blog/)
 * Subscribe to the [Joomlatools Newsletter](http://www.joomlatools.com/newsletter)
-#5
+
 [Joomlatools Platform]: https://developer.joomlatools.com/platform
 
