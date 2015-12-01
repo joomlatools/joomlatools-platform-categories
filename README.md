@@ -18,7 +18,7 @@ Joomla Categories can and should be installed by using [Composer](https://getcom
 Go to the root directory of your Joomla Platform installation using the command line and execute following command:
 
 ```
-composer require joomlatools/joomla-platform-categories:1.*
+composer require joomlatools/platform-categories:1.*
 ```
 
 ## Contributing

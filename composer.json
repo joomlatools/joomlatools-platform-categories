@@ -1,10 +1,10 @@
 {
-  "name": "joomlatools/joomla-platform-categories",
-  "type": "joomla-installer",
+  "name": "joomlatools/platform-categories",
+  "type": "joomlatools-composer",
   "license": "GPLv3",
   "description": "Categories extension for the Joomlatools Platform",
   "keywords": ["joomla", "extension", "platform"],
-  "homepage": "https://github.com/joomlatools/joomla-platform-categories",
+  "homepage": "https://github.com/joomlatools/joomlatools-platform-categories",
   "authors": [
     {
       "name": "Johan Janssens",
@@ -19,8 +19,8 @@
   ],
   "require": {
     "php": ">=5.5.0",
-    "joomlatools/installer": "*",
-    "joomlatools/joomla-platform-legacy": "^1.0.0"
+    "joomlatools/composer": "*",
+    "joomlatools/platform-legacy": "^1.0.0"
   },
   "autoload": {
     "files": ["autoload.php"]
