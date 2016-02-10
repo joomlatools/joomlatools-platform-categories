@@ -38,6 +38,6 @@ Keep track of development and community news.
 * Read the [Joomlatools Developer Blog](http://www.joomlatools.com/developer/blog/)
 * Subscribe to the [Joomlatools Developer Newsletter](http://www.joomlatools.com/developer/newsletter/)
 
-[Joomlatools Platform]: https://developer.joomlatools.com/platform
+[Joomlatools Platform]: https://www.joomlatools.com/developer/platform/
 
 
