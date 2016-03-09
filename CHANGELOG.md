@@ -6,6 +6,9 @@ This changelog references the relevant changes (bug and security fixes) done in 
 To get the diff for a specific change, go to https://github.com/joomlatools/joomlatools-platform-categories/commit/xxx where xxx is the
 change hash. To view the diff between two versions, go to https://github.com/joomlatools/joomlatools-platform-categories/compare/v1.0.0...v1.0.1
 
+* 1.0.3 (2016-03-09)
+ * Fixed - Port security fixes from Joomla v3.4.6 - v3.4.8 [#15](https://github.com/joomlatools/joomlatools-platform-categories/issues/15)
+
 * 1.0.2 (2015-12-01)
  * Changed - Update repository and package names [#11](https://github.com/joomlatools/joomlatools-platform-categories/issues/11)
 
