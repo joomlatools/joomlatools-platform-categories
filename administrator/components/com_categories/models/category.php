@@ -483,9 +483,12 @@ class CategoriesModelCategory extends JModelAdmin
 			// Adding self to the association
 			$associations = $data['associations'];
 
+			// Unset any invalid associations
+			$associations = Joomla\Utilities\ArrayHelper::toInteger($associations);
+
 			foreach ($associations as $tag => $id)
 			{
-				if (empty($id))
+				if (!$id)
 				{
 					unset($associations[$tag]);
 				}
@@ -525,7 +528,7 @@ class CategoriesModelCategory extends JModelAdmin
 
 				foreach ($associations as $id)
 				{
-					$query->values($id . ',' . $db->quote('com_categories.item') . ',' . $db->quote($key));
+					$query->values((int)$id . ',' . $db->quote('com_categories.item') . ',' . $db->quote($key));
 				}
 
 				$db->setQuery($query);

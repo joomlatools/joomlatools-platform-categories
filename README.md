@@ -18,7 +18,7 @@ Joomla Categories can and should be installed by using [Composer](https://getcom
 Go to the root directory of your Joomla Platform installation using the command line and execute following command:
 
 ```
-composer require joomlatools/joomla-platform-categories:1.*
+composer require joomlatools/platform-categories:1.*
 ```
 
 ## Contributing
@@ -33,9 +33,11 @@ Joomla Categories is open-source software licensed under the [GPLv3 license](LIC
 
 Keep track of development and community news.
 
-* Follow [@joomlatools on Twitter](https://twitter.com/joomlatools)
-* Read and subscribe to the [Joomlatools Blog](https://joomlatools.com/blog/)
-* Subscribe to the [Joomlatools Newsletter](http://www.joomlatools.com/newsletter)
-#5
-[Joomlatools Platform]: https://developer.joomlatools.com/platform
+* Follow [@joomlatoolsdev on Twitter](https://twitter.com/joomlatoolsdev)
+* Join [joomlatools/dev on Gitter](http://gitter.im/joomlatools/dev)
+* Read the [Joomlatools Developer Blog](https://www.joomlatools.com/developer/blog/)
+* Subscribe to the [Joomlatools Developer Newsletter](https://www.joomlatools.com/developer/newsletter/)
+
+[Joomlatools Platform]: https://www.joomlatools.com/developer/platform/
+
 
