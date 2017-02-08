@@ -3,13 +3,13 @@
  * @package     Joomla.Administrator
  * @subpackage  com_categories
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ *
+ * @deprecated  3.4 Use default_batch_body and default_batch_footer
  */
 
 defined('_JEXEC') or die;
-
-JHtml::_('formbehavior.chosen', 'select');
 
 $options = array(
 	JHtml::_('select.option', 'c', JText::_('JLIB_HTML_BATCH_COPY')),
@@ -31,18 +31,18 @@ $extension = $this->escape($this->state->get('filter.extension'));
 					<?php echo JHtml::_('batch.language'); ?>
 				</div>
 			</div>
-		</div>
-		<div class="row-fluid">
 			<div class="control-group span6">
 				<div class="controls">
 					<?php echo JHtml::_('batch.access'); ?>
 				</div>
 			</div>
+		</div>
+		<div class="row-fluid">
 			<?php if ($published >= 0) : ?>
 				<div class="span6">
 					<div class="control-group">
 						<label id="batch-choose-action-lbl" for="batch-category-id" class="control-label">
-							<?php echo JText::_('COM_CATEGORIES_BATCH_CATEGORY_LABEL'); ?>
+							<?php echo JText::_('JLIB_HTML_BATCH_MENU_LABEL'); ?>
 						</label>
 						<div id="batch-choose-action" class="combo controls">
 							<select name="batch[category_id]" id="batch-category-id">
@@ -51,7 +51,7 @@ $extension = $this->escape($this->state->get('filter.extension'));
 							</select>
 						</div>
 					</div>
-					<div class="control-group radio">
+					<div id="batch-copy-move" class="control-group radio">
 						<?php echo JHtml::_('select.radiolist', $options, 'batch[move_copy]', '', 'value', 'text', 'm'); ?>
 					</div>
 				</div>
@@ -59,7 +59,7 @@ $extension = $this->escape($this->state->get('filter.extension'));
 		</div>
 	</div>
 	<div class="modal-footer">
-		<button class="btn" type="button" onclick="document.id('batch-category-id').value='';document.id('batch-access').value='';document.id('batch-language-id').value=''" data-dismiss="modal">
+		<button class="btn" type="button" onclick="document.getElementById('batch-category-id').value='';document.getElementById('batch-access').value='';document.getElementById('batch-language-id').value=''" data-dismiss="modal">
 			<?php echo JText::_('JCANCEL'); ?>
 		</button>
 		<button class="btn btn-primary" type="submit" onclick="Joomla.submitbutton('category.batch');">

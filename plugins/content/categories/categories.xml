@@ -3,7 +3,7 @@
 	<name>plg_content_categories</name>
 	<author>Joomlatools</author>
 	<creationDate>November 2010</creationDate>
-	<copyright>Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2005 - 2016 Open Source Matters. All rights reserved.</copyright>
     <copyright>Copyright (C) 2015 Timble CVBA (http://www.timble.net)</copyright>
     <copyright>Copyright (C) 2015 Johan Janssens</copyright>
     <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
@@ -20,12 +20,14 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="check_categories"
+				<field
+					name="check_categories"
 					type="radio"
+					label="PLG_CONTENT_JOOMLA_FIELD_CHECK_CATEGORIES_LABEL"
+					description="PLG_CONTENT_JOOMLA_FIELD_CHECK_CATEGORIES_DESC"
 					class="btn-group btn-group-yesno"
 					default="1"
-					description="PLG_CONTENT_CATEGORIES_FIELD_CHECK_CATEGORIES_DESC"
-					label="PLG_CONTENT_CATEGORIES_FIELD_CHECK_CATEGORIES_LABEL">
+					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>

@@ -3,7 +3,7 @@
  * @package     Joomla.Site
  * @subpackage  com_categories
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,16 +12,14 @@ defined('JPATH_PLATFORM') or die;
 /**
  * Categories view base class.
  *
- * @package     Joomla.Site
- * @subpackage  com_categories
- * @since       3.2
+ * @since  3.2
  */
 class CategoriesViewCategories extends JViewLegacy
 {
 	/**
 	 * State data
 	 *
-	 * @var    JRegistry
+	 * @var    \Joomla\Registry\Registry
 	 * @since  3.2
 	 */
 	protected $state;
@@ -47,7 +45,7 @@ class CategoriesViewCategories extends JViewLegacy
 	 *
 	 * @param   string  $tpl  The name of the template file to parse; automatically searches through the template paths.
 	 *
-	 * @return  mixed  A string if successful, otherwise a Error object.
+	 * @return  mixed  A string if successful, otherwise an Error object.
 	 *
 	 * @since   3.2
 	 */
@@ -86,9 +84,9 @@ class CategoriesViewCategories extends JViewLegacy
 		$items = array($parent->id => $items);
 
 		// Escape strings for HTML output
-		$this->pageclass_sfx = htmlspecialchars($params->get('pageclass_sfx'));
+		$this->pageclass_sfx = htmlspecialchars($params->get('pageclass_sfx'), ENT_COMPAT, 'UTF-8');
 
-		$this->maxLevelcat = $params->get('maxLevelcat', -1);
+		$this->maxLevelcat = $params->get('maxLevelcat', -1) < 0 ? PHP_INT_MAX : $params->get('maxLevelcat', PHP_INT_MAX);
 		$this->params      = &$params;
 		$this->parent      = &$parent;
 		$this->items       = &$items;

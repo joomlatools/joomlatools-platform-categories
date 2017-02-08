@@ -3,11 +3,13 @@
  * @package     Joomla.Administrator
  * @subpackage  com_categories
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
+
+use Joomla\Registry\Registry;
 
 /**
  * Category table
@@ -145,7 +147,7 @@ class CategoriesTableCategories extends JTableNested
             $this->alias = $this->title;
         }
 
-        $this->alias = JApplication::stringURLSafe($this->alias);
+        $this->alias = JApplicationHelper::stringURLSafe($this->alias, $this->language);
 
         if (trim(str_replace('-', '', $this->alias)) == '')
         {
@@ -171,14 +173,14 @@ class CategoriesTableCategories extends JTableNested
     {
         if (isset($array['params']) && is_array($array['params']))
         {
-            $registry = new JRegistry;
+            $registry = new Registry;
             $registry->loadArray($array['params']);
             $array['params'] = (string) $registry;
         }
 
         if (isset($array['metadata']) && is_array($array['metadata']))
         {
-            $registry = new JRegistry;
+            $registry = new Registry;
             $registry->loadArray($array['metadata']);
             $array['metadata'] = (string) $registry;
         }
@@ -207,23 +209,33 @@ class CategoriesTableCategories extends JTableNested
         $date = JFactory::getDate();
         $user = JFactory::getUser();
 
+        $this->modified_time = $date->toSql();
+
         if ($this->id)
         {
             // Existing category
-            $this->modified_time = $date->toSql();
             $this->modified_user_id = $user->get('id');
         }
         else
         {
-            // New category
-            $this->created_time = $date->toSql();
-            $this->created_user_id = $user->get('id');
+            // New category. A category created_time and created_user_id field can be set by the user,
+            // so we don't touch either of these if they are set.
+            if (!(int) $this->created_time)
+            {
+                $this->created_time = $date->toSql();
+            }
+
+            if (empty($this->created_user_id))
+            {
+                $this->created_user_id = $user->get('id');
+            }
+
         }
 
         // Verify that the alias is unique
         $table = JTable::getInstance('Categories', 'CategoriesTable', array('dbo' => $this->getDbo()));
 
-        if ($table->load(array('alias' => $this->alias, 'parent_id' => $this->parent_id, 'extension' => $this->extension))
+        if ($table->load(array('alias' => $this->alias, 'parent_id' => (int) $this->parent_id, 'extension' => $this->extension))
             && ($table->id != $this->id || $this->id == 0))
         {
             $this->setError(JText::_('JLIB_DATABASE_ERROR_CATEGORY_UNIQUE_ALIAS'));
