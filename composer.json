@@ -19,7 +19,8 @@
   ],
   "require": {
     "php": ">=5.5.0",
-    "joomlatools/composer": "*"
+    "joomlatools/composer": "*",
+    "joomlatools/platform-legacy": "dev-feature/17-joomla-3.6.5-upgrade"
   },
   "autoload": {
     "files": ["autoload.php"]
