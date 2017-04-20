@@ -3,7 +3,7 @@
  * @package     Joomla.Plugin
  * @subpackage  Content.Categories
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -12,9 +12,7 @@ defined('_JEXEC') or die;
 /**
  * Categories Content Plugin
  *
- * @package     Joomla.Plugin
- * @subpackage  Content.Categories
- * @since       1.6
+ * @since  1.6
  */
 class PlgContentCategories extends JPlugin
 {
@@ -70,8 +68,8 @@ class PlgContentCategories extends JPlugin
 				// Show error if items are found in the category
 				if ($count > 0)
 				{
-					$msg = JText::sprintf('COM_CATEGORIES_DELETE_NOT_ALLOWED', $data->get('title')) .
-						JText::plural('COM_CATEGORIES_N_ITEMS_ASSIGNED', $count);
+					$msg = JText::sprintf('COM_CATEGORIES_DELETE_NOT_ALLOWED', $data->get('title'))
+						. JText::plural('COM_CATEGORIES_N_ITEMS_ASSIGNED', $count);
 					JError::raiseWarning(403, $msg);
 					$result = false;
 				}
@@ -87,8 +85,8 @@ class PlgContentCategories extends JPlugin
 					}
 					elseif ($count > 0)
 					{
-						$msg = JText::sprintf('COM_CATEGORIES_DELETE_NOT_ALLOWED', $data->get('title')) .
-							JText::plural('COM_CATEGORIES_HAS_SUBCATEGORY_ITEMS', $count);
+						$msg = JText::sprintf('COM_CATEGORIES_DELETE_NOT_ALLOWED', $data->get('title'))
+							. JText::plural('COM_CATEGORIES_HAS_SUBCATEGORY_ITEMS', $count);
 						JError::raiseWarning(403, $msg);
 						$result = false;
 					}
