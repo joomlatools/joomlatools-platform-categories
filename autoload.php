@@ -12,6 +12,7 @@ if (!defined('JOOMLATOOLS_PLATFORM')) {
 }
 
 JLoader::register('JCategories'               , JPATH_ADMINISTRATOR . '/components/com_categories/libraries/categories.php');
+JLoader::register('JCategoryNode'             , JPATH_ADMINISTRATOR . '/components/com_categories/libraries/categories.php');
 JLoader::register('CategoriesTableCategories' , JPATH_ADMINISTRATOR . '/components/com_categories/tables/categories.php');
 
 if(JPATH_BASE == JPATH_SITE)
